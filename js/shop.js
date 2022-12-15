@@ -199,11 +199,22 @@ function addToCart(id) {
 
 // Exercise 8
 function removeFromCart(id) {
+    let obj_product = cart.find((products) => id == products.id);
+    obj_product.quantity--;
+    if (obj_product.quantity == 0) { 
+        const product_to_el = cart.find((products) => id = products.id); 
+        cart.splice(product_to_el, 1);
+    }
+    applyPromotionsCart();
+    calculateTotal();
+    printCart();
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cartList array
 }
 
 function open_modal(){
 	console.log("Open Modal");
+    applyPromotionsCart();
+    calculateTotal();
 	printCart();
 }
