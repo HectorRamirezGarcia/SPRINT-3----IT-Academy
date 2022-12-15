@@ -94,6 +94,16 @@ function calculateTotal() {
 
 // Exercise 4
 function generateCart() {
+    cartList.forEach( products => {
+        if (cart.find((product) => product.id == products.id)) { 
+            let counts = 0;
+            cartList.forEach((x) => { if(x.id == products.id){ counts ++; }});
+            cart.find((product) => product.id == products.id).quantity = counts;
+        } else {
+            let object_product = { id : products.id, name : products.name, price : products.price, type : products.type, quantity : 1, subtotal : products.subtotal, subtotalWithDiscount : products.subtotalWithDiscount}
+            cart.push(object_product);
+        }
+    });
     // Using the "cartlist" array that contains all the items in the shopping cart, 
     // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
 }
