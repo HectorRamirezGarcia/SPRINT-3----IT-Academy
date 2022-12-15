@@ -125,12 +125,11 @@ function applyPromotionsCart() {
             products.subtotalWithDiscount = products.price * products.quantity;
         }
     })
-    // Apply promotions to each item in the array "cart"
 }
 
 // Exercise 6
 function printCart() {
-
+    
     let parent_element = document.getElementById("cart_list");        
     parent_element.replaceChildren();
     cart.forEach(products => 
@@ -173,6 +172,7 @@ function printCart() {
             total_price.textContent = total;
         }
     )
+
     // Fill the shopping cart modal manipulating the shopping cart dom
 }
 

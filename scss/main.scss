@@ -1,0 +1,191 @@
+// Import Bootstrap
+@import "../libs/bootstrap/scss/bootstrap.scss";
+
+//Imports Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+// Variables
+
+$primary-color: rgb(250, 219, 216);
+$shadow-primary-color: rgb(188, 168, 166);
+$font-dancing: 'Dancing Script', cursive;
+$font-cabin: 'Cabin', sans-serif;
+
+// Styles
+
+// Nav Style
+.bg_primary_color {
+    background-color: $primary-color !important;
+}
+
+.name_page {
+    color: black !important;
+    font-family: $font-dancing;
+    font-size: 2rem;
+    padding: 0.5rem;
+    transition: all 1s;
+}
+
+.name_page:hover {
+   color: white !important;
+   text-shadow: $shadow-primary-color 0 2px 4px;
+   box-shadow: 0px 5px 0px $shadow-primary-color;
+}
+
+.nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: $font-cabin;
+    margin-bottom: 2px;
+}
+
+#navbar {
+    margin-left: 5%;
+    margin-right: 5%;
+    background: $primary-color;
+    box-shadow: 0px 5px 0px $shadow-primary-color;
+    
+  }
+  
+  #navbar a {
+    transition: all 0.5s;
+  }
+  
+  #navbar a:hover {
+    color: $primary-color; 
+    font-family: $font-cabin;
+    background-color: black;
+    text-shadow: black 0 2px 4px;
+    border-radius: 50px 25px;
+    box-shadow: 0px 5px 2px black;
+
+  }
+
+  #navbar a:hover:after {
+    z-index: -10;
+    animation: fill 0.2s forwards;
+    -webkit-animation: fill 0.2s forwards;
+    -moz-animation: fill 0.2s forwards;
+    opacity: 1;
+  }
+
+  .btn-buy {
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 5px 0px $shadow-primary-color;
+    border-left: 5px solid $shadow-primary-color;
+    border-right: 5px solid $shadow-primary-color;
+    border-radius: 25px;
+    border-color: black;
+    background: $primary-color;
+    transition: all 0.5s;
+  }
+
+  .btn-buy:hover {
+    color: white;
+    z-index: 2;
+    background-color: $shadow-primary-color;
+    border-radius: 50px 20px;
+    border-color: white;
+    text-shadow: $shadow-primary-color 0 2px 4px;
+  }
+  
+// Header
+
+  .title-carousel {
+    font-family: $font-dancing;
+    text-shadow: black 0 2px 4px;
+    color: white;
+  }
+
+  .sub-text {
+    color: white; 
+    font-family: $font-cabin;
+    background-color: $shadow-primary-color;
+    text-shadow: black 0 2px 4px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 2px black;
+    transition: all 0.5s;
+  }
+
+  .sub-text:hover {
+    color: $primary-color; 
+    font-family: $font-cabin;
+    background-color: black;
+    text-shadow: black 0 2px 4px;
+    border-radius: 50px 25px;
+    box-shadow: 0px 5px 2px black;
+  }
+
+  // Sections
+
+  section > h2{
+    color: $primary-color;
+  }
+
+  .box-shadow-white {
+    box-shadow: 0.3em 0.3em 0.3rem 0.5rem white;
+    border-color: white;
+  }
+
+  // Modal 
+
+  .btn-close-modal {
+    background-color: $primary-color;
+    box-shadow: 0px 5px 2px black;
+    transition: all 0.5s;
+  }
+
+  .btn-close-modal:hover{
+    color: black;
+    background-color: $primary-color;
+    box-shadow: 0px 5px 2px black;
+  }
+
+  th {
+    font-family: $font-dancing !important;
+    border-color: $primary-color !important;
+    color: white !important;
+  }
+
+  .product {
+    color: white; 
+    font-family: $font-cabin !important;
+    background-color: $shadow-primary-color;
+    text-shadow: $primary-color 0 1px 1px;
+  }
+
+  // Checkout
+
+  // Container
+
+  .bg_style_container {
+    color: white; 
+    font-family: $font-dancing !important;
+    background-color: $primary-color;
+    box-shadow: 0px 5px 2px $shadow-primary-color;
+    border-radius: 25px;
+    text-shadow: $shadow-primary-color 0 1px 1px;
+  }
+
+  .bg_style_container-2 {
+    color: $primary-color; 
+    font-family: $font-dancing !important;
+    background-color: black;
+    box-shadow: 0px 5px 2px $shadow-primary-color;
+    border-radius: 25px;
+    text-shadow: $shadow-primary-color 0 1px 1px;
+  }
+
+  input {
+    font-family: $font-cabin !important;
+    border: 3px solid $primary-color !important;
+    border-radius: 25px !important;
+    color: $primary-color !important;
+  }
+
+  input::placeholder{
+    font-family: $font-cabin !important;
+    color: $primary-color !important;
+  }
