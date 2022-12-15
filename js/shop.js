@@ -110,6 +110,16 @@ function generateCart() {
 
 // Exercise 5
 function applyPromotionsCart() {
+    cart.forEach( products => {
+        products.subtotal = products.price * products.quantity;
+        if(products.type == 'grocery' && products.quantity >= 10){
+            products.subtotalWithDiscount = products.subtotal - products.price;
+        } else if(products.id == 1 && products.quantity >= 3){
+            products.subtotalWithDiscount = products.subtotal - 10;
+        } else {
+            products.subtotalWithDiscount = products.price * products.quantity;
+        }
+    })
     // Apply promotions to each item in the array "cart"
 }
 
