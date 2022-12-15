@@ -125,6 +125,49 @@ function applyPromotionsCart() {
 
 // Exercise 6
 function printCart() {
+
+    let parent_element = document.getElementById("cart_list");        
+    parent_element.replaceChildren();
+    cart.forEach(products => 
+        {
+            let tr = document.createElement('tr');
+            let th = document.createElement('th');
+            let td_price = document.createElement('td');
+            let td_quantity = document.createElement('td');
+            let td_totalwd = document.createElement('td');
+            let td_button_el1 = document.createElement('td');
+            let button_el1 = document.createElement('button');
+
+            th.textContent = products.name;
+            td_price.textContent = products.price;
+            td_quantity.textContent = products.quantity;
+            if(products.subtotalWithDiscount == 0 || products.subtotalWithDiscount == "" || products.subtotalWithDiscount == null){
+                td_totalwd.textContent = products.quantity * products.price;
+            } else {
+                td_totalwd.textContent = products.subtotalWithDiscount;
+            }
+
+            button_el1.setAttribute("onclick", "removeFromCart("+products.id+")")
+            button_el1.setAttribute("class", "btn sub-text");
+            button_el1.textContent = " - ";
+            td_button_el1.append(button_el1);
+
+            th.setAttribute("class", "product");
+            td_price.setAttribute("class", "product");
+            td_quantity.setAttribute("class", "product");
+            td_totalwd.setAttribute("class", "product");
+            
+            tr.append(th);
+            tr.append(td_price);
+            tr.append(td_quantity);
+            tr.append(td_totalwd)
+            tr.append(td_button_el1)
+            parent_element.appendChild(tr);
+
+            let total_price = document.getElementById("total_price");
+            total_price.textContent = total;
+        }
+    )
     // Fill the shopping cart modal manipulating the shopping cart dom
 }
 
