@@ -85,6 +85,10 @@ function cleanCart() {
 
 // Exercise 3
 function calculateTotal() {
+    let total_actual = 0;
+    cart.forEach( product => {applyPromotionsCart(); total_actual+=product.subtotalWithDiscount; })
+    console.log(total_actual);
+    total = total_actual;
     // Calculate total price of the cart using the "cartList" array
 }
 
